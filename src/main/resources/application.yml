@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: task-management-rest-api
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/taskmanagement
+    username: taskmanagement
+    password: taskmanagement
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:this-is-a-dev-only-secret-change-it-before-any-real-deployment-32bytes+}
+    expiration-ms: 86400000   # 24h
+
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html

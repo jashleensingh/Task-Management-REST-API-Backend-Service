@@ -1,0 +1,7 @@
+package com.jashleen.taskmanagement.exception;
+
+public class InvalidStatusTransitionException extends RuntimeException {
+    public InvalidStatusTransitionException(String message) {
+        super(message);
+    }
+}
